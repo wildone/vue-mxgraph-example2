@@ -1,6 +1,20 @@
-# vue-mxgraph-example
+### vue-mxgraph-example
 
-## Project setup
+#Example use Vue.js + MxGraph
+
+MxGraph source: https://github.com/jgraph/mxgraph
+
+Mini Manual: https://jgraph.github.io/mxgraph/docs/manual.html
+
+API Docs: http://jgraph.github.io/mxgraph/docs/js-api/files/view/mxGraph-js.html
+
+Examples(JS): https://jgraph.github.io/mxgraph/javascript/index.html
+
+#My Project:
+Free Database Modeling Tool Online
+https://nosqldbm.ru/
+
+# Project setup
 ```
 npm install
 ```
