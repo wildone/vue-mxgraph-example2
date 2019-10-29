@@ -1,5 +1,5 @@
 <template>
-    <div style="padding: 0 15px 0 10px; font-size: 14px">
+    <div style="padding: 0 15px 0 10px; font-size: 14px; width: 200px; margin-top: 2em">
         <div>
             <strong style="color: white">Edit Form:</strong>
         </div>

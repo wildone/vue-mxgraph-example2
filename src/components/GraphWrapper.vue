@@ -26,25 +26,25 @@
         mxImage, mxDivResizer, mxObjectCodec, mxCodecRegistry, mxConnectionHandler
     } = mxgraph(graphConfig);
 
-    window['mxClient'] = mxClient;
-    window['mxUtils'] = mxUtils;
-    window['mxRectangle'] = mxRectangle;
-    window['mxGraph'] = mxGraph;
-    window['mxEvent'] = mxEvent;
-    window['mxGeometry'] = mxGeometry;
-    window['mxCell'] = mxCell;
-    window['mxImage'] = mxImage;
-    window['mxEditor'] = mxEditor;
-    window['mxDivResizer'] = mxDivResizer;
-    window['mxObjectCodec'] = mxObjectCodec;
-    window['mxCodecRegistry'] = mxCodecRegistry;
-    window['mxConnectionHandler'] = mxConnectionHandler;
+    window.mxClient = mxClient;
+    window.mxUtils = mxUtils;
+    window.mxRectangle = mxRectangle;
+    window.mxGraph = mxGraph;
+    window.mxEvent = mxEvent;
+    window.mxGeometry = mxGeometry;
+    window.mxCell = mxCell;
+    window.mxImage = mxImage;
+    window.mxEditor = mxEditor;
+    window.mxDivResizer = mxDivResizer;
+    window.mxObjectCodec = mxObjectCodec;
+    window.mxCodecRegistry = mxCodecRegistry;
+    window.mxConnectionHandler = mxConnectionHandler;
 
     var editor;
 
     // CustomUserObject
     window.CustomUserObject = function (name, type) {
-        this.name = name || 'New Object';
+        this.name = name || 'New Name';
         this.type = type || 'New Type';
         this.clone = function () {
             return mxUtils.clone(this);
@@ -100,12 +100,17 @@
                 // Creates the image which is used as the sidebar icon (drag source)
                 let wrapper = document.createElement('div');
                 wrapper.style.cursor = 'pointer';
-                wrapper.style.backgroundColor = 'orangered';
+                wrapper.style.backgroundColor = '#c3d9ff';
                 wrapper.style.margin = '10px';
-                wrapper.style.width = '50px';
+                wrapper.style.width = '200px';
                 wrapper.style.height = '50px';
                 wrapper.style.textAlign = 'center';
-                wrapper.innerText = 'Drag';
+                wrapper.style.display = 'flex';
+                wrapper.style.flexWrap = 'wrap';
+                wrapper.style.alignItems = 'center';
+                wrapper.style.justifyContent = 'center';
+                wrapper.style.border = '2px dashed crimson';
+                wrapper.innerHTML = '<div>Custom User Object</div><div style="color: #8C8C8C">Drag me to scheme!</div>';
                 sidebar.appendChild(wrapper);
 
                 // Creates the image which is used as the drag icon (preview)
@@ -141,7 +146,7 @@
                     sidebar.style.display = 'flex';
                     sidebar.style.flexDirection = 'column-reverse';
                     sidebar.style.alignItems = 'center';
-                    sidebar.style.justifyContent = 'space-between';
+                    sidebar.style.justifyContent = 'flex-end';
                     sidebar.style.backgroundColor = '#292961';
 
                     if (mxClient.IS_QUIRKS) {
